@@ -18,5 +18,24 @@ Launching the experiment side requires a couple of matlab toolboxes:
 * the binaural cross-correlogram toolbox by Michael Akeroyd (not currently available but also not manda-
 tory to run most experiments)
 
+### Setting up the AFC toolbox
+
+The easiest way to set it up is probably to uncompress the afc folder after downloading it and copy/paste
+it in the main model initiative repo (ie where the other folders model server, fileexchange... are).
+When this is done, one small edit has to be made, open the file /afc/base/default cfg and at line 704,
+replace the line def.clearGlobals = 1; by def.clearGlobals = [1 1 1 1 1 0];
+You can now open a matlab instance, navigate to the main model initiative folder and run the model initiative experiment init
+script to add the necessary paths to the matlab path.
+From there you can run for instance the following:
+
+'afc_main('KleinHennig2011','ModelInitiative','identifierXY','4');'
+
+or
+
+'afc main('van de Par Kohlrausch 1999','ModelInitiative','breebaart1','500');'
+
+The available afc experiments are located in the /experiments/afc folder.
+
+
 
 
