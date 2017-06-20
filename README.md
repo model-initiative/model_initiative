@@ -25,7 +25,7 @@ it in the main model initiative repo (ie where the other folders model server, f
 When this is done, one small edit has to be made, open the file /afc/base/default cfg and at line 704,
 replace the line def.clearGlobals = 1; by def.clearGlobals = [1 1 1 1 1 0];
 You can now open a matlab instance, navigate to the main model initiative folder and run the model initiative experiment init
-script to add the necessary paths to the matlab path.
+script to add the necessary paths to the matlab path./
 From there you can run for instance the following:
 
 ```afc_main('KleinHennig2011','ModelInitiative','identifierXY','4');```
@@ -34,7 +34,39 @@ or
 
 ```afc main('van de Par Kohlrausch 1999','ModelInitiative','breebaart1','500');```
 
-The available afc experiments are located in the /experiments/afc folder.
+The available afc experiments are located in the /experiments/afc folder./
+
+### Launching the model/detector side
+
+Comparing different computational models can be challenging when models are written in different lan-
+guages. The Model Initiative library addresses that issue by allowing the user to launch matlab/octave
+models and detectors as well as python models and detectors from a common command line (either matlab
+or python command line). The main idea behind that is to create threads in which models and detectors
+run. These threads are created and closed automatically when the user runs either the model server matlab
+function or the model server python function. Because the way to launch matlab,octave or python threads
+varies with the platform that the user runs (Windows, MacOS, Linux), some small editing/configuring might
+be necessary to use the library. Those edits will be explained further in the following subsections./
+
+#### Minimum requirements for the matlab user
+
+* Matlab, above R2013a
+
+To run python examples, the python requirements must be satisfied as well
+
+#### Minimum requirements for the octave user
+
+* Octave above 4.0.0
+* Packages nan,statistics, signal, control, io /
+  * https://octave.sourceforge.io/control/
+  * https://octave.sourceforge.io/io/
+  * https://octave.sourceforge.io/nan/
+  * https://octave.sourceforge.io/signal/
+  * https://octave.sourceforge.io/statistics/
+
+
+
+
+
 
 
 
