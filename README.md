@@ -6,6 +6,7 @@ This document aims to describe how to use matlab/octave and/or python to launch 
 models and detectors in the context of a model comparison framework described in more details below.
 
 ![alt](schema.png)
+/
 A: Classic experiment in psychoacoustics B: Structure of the model comparison framework, models process
 sounds output by the experiment side.The model’s output is then fed to the detector which comes up with a decision/
 
