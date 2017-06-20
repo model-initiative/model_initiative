@@ -8,7 +8,7 @@ models and detectors in the context of a model comparison framework described in
 ![alt](schema.png)
 \
 A: Classic experiment in psychoacoustics B: Structure of the model comparison framework, models process
-sounds output by the experiment side.The model’s output is then fed to the detector which comes up with a decision/
+sounds output by the experiment side.The output of the model is then fed to the detector which comes up with a decision/
 
 From the figure below, two sides can be observed: the experiment side and the model/detector side/
 
@@ -22,10 +22,12 @@ tory to run most experiments)
 ### Setting up the AFC toolbox
 
 The easiest way to set it up is probably to uncompress the afc folder after downloading it and copy/paste
-it in the main model initiative repo (ie where the other folders model server, fileexchange... are).
+it in the main *model_initiative* repo (ie where the other folders *model_server*, *fileexchange*... are).
 When this is done, one small edit has to be made, open the file /afc/base/default cfg and at line 704,
-replace the line def.clearGlobals = 1; by def.clearGlobals = [1 1 1 1 1 0];
-You can now open a matlab instance, navigate to the main model initiative folder and run the model initiative experiment init
+replace the line ```def.clearGlobals = 1;``` by ```def.clearGlobals = [1 1 1 1 1 0];```
+You can now open a matlab instance, navigate to the main *model_initiative* folder and run the\
+```model_initiative_experiment_init```
+
 script to add the necessary paths to the matlab path.\
 From there you can run for instance the following:
 
@@ -35,7 +37,7 @@ or
 
 ```afc main('van de Par Kohlrausch 1999','ModelInitiative','breebaart1','500');```
 
-The available afc experiments are located in the /experiments/afc folder.\
+The available afc experiments are located in the */experiments/afc* folder.\
 
 ## Launching the model/detector side
 
@@ -44,7 +46,7 @@ guages. The Model Initiative library addresses that issue by allowing the user t
 models and detectors as well as python models and detectors from a common command line (either matlab
 or python command line). The main idea behind that is to create threads in which models and detectors
 run. These threads are created and closed automatically when the user runs either the model server matlab
-function or the model server python function. Because the way to launch matlab,octave or python threads
+function or the *model_server_python* function. Because the way to launch matlab,octave or python threads
 varies with the platform that the user runs (Windows, MacOS, Linux), some small editing/configuring might
 be necessary to use the library. Those edits will be explained further in the following subsections.\
 
@@ -76,7 +78,7 @@ requirements must be satisfied as well.
 
 ### Set up and configuration depending on the user’s OS
 The model and detector threads are launched from the python model server call.m, matlab model server call.py
-and from the detector interface python.py and detector interface matlab.m functions located in the model server
+and from the *detector_interface_python.py* and *detector_interface_matlab.m* functions located in the *model_server*
 folder(see call graph below).
 
 * For Windows users: If you want to use Octave, you might have to add to your PATH environment
@@ -89,43 +91,43 @@ do so please follow the instructions:
 4. A dialogue should pop up with a link on the left called ”Advanced system settings”. Click it.
 5. In the System Properties dialogue, click the button called ”Environment Variables”.
 6. In the Environment Variables dialogue look for ”Path” under the System Variables window.
-7. Add ’;C:\Octave-4.0.0\bin’ to the end of it. The semicolon is the path separator on windows.
+7. Add ```’;C:\Octave-4.0.0\bin’``` to the end of it. The semicolon is the path separator on windows.
 8. Click Ok and close the dialogues.
 
 * For Linux users: Matlab runs bash commands using its own version of libstdc++, that version might
 be incompatible with the one that exists on your system. A fix to it is to export to your library PATH
 the path to the directory where the libstdc++.so.6 file is. On many computers that path is located in
-the directory /usr/lib/i386-linux-gnu. If on your computer that path is located somewhere else then
-please edit the detector interface matlab.m and the python model server call.m and change the path
-in all commands starting with export LD LIBRARY PATH=/usr/lib/i386-linux-gnu with your own
+the directory ```/usr/lib/i386-linux-gnu``` . If on your computer that path is located somewhere else then
+please edit the *detector_interface_matlab.m* and the python model server call.m and change the path
+in all commands starting with ```export LD_LIBRARY_PATH=/usr/lib/i386-linux-gnu``` with your own
 path. Everything else should work well after that change.
 
-* For the MacOS users: it is assumed that Matlab and Octave were installed by the user in the Applica-
- tions folder (default folder used by MacOS when software is installed). The matlab and octave binary
+* For the MacOS users: it is assumed that Matlab and Octave were installed by the user in the *Applica-
+ tions* folder (default folder used by MacOS when software is installed). The matlab and octave binary
  files are not directly callable from the command line. To change that, a couple of symbolic links must
  be set up.
 
   - For matlab: Open a terminal window, from there type:
  ``` sudo ln -s /path to your matlab bin /usr/local/bin/matlab ```
-  The matlab binary file is usually located at /Applications/MATLAB RXXXX/bin/matlab where
+  The matlab binary file is usually located at */Applications/MATLAB RXXXX/bin/matlab* where
   XXXX is the version of matlab.
  
   - For Octave: Open a terminal window,from there type:
  ``` sudo ln -s /path to your octave-cli-XXX bin /usr/local/bin/octave-cli ```
  Usually, the octave-cli-XXX binary file is located at:
- /Applications/Octave.app/Contents/Resources/usr/Cellar/octave/X.X.X/bin/octave-cli-X.X.X, where
+ */Applications/Octave.app/Contents/Resources/usr/Cellar/octave/X.X.X/bin/octave-cli-X.X.X*, where
  X.X.X is the version number.
 
 ## Quick description of the organization of the library
-* fileexchange folder hosts the different files that are exchanged between the experiment side, the model
+* *fileexchange* folder hosts the different files that are exchanged between the experiment side, the model
 side and the detector side
-* pathway model folder stores the available models written in any language (matlab,octave or python)
-* decision stage folder stores the available detectors written in any language
-* Experiment files (either AFC, AMT or your own) can be found in the experiment folder.
-* model server folder stores the matlab and python function used to interface experiments, models and
+* *pathway_model* folder stores the available models written in any language (matlab,octave or python)
+* *decision_stage* folder stores the available detectors written in any language
+* *Experiment* files (either AFC, AMT or your own) can be found in the experiment folder.
+* *model_server* folder stores the matlab and python function used to interface experiments, models and
  detectors (see call graph)
-* data folder stores the results produced on the experiment side.
-* plot routine folder contains a set of function to plot the results store in the data folder
+* *data* folder stores the results produced on the experiment side.
+* *plot* routine folder contains a set of function to plot the results store in the data folder
 
 ## Quick start
 Once the requirements are satisfied, download the model initiative folder, then sssuming the experiment
@@ -133,7 +135,7 @@ side is already launched:
 
 ### For the matlab/octave user
 1. Open a matlab/octave desktop
-2. Navigate to the main folder of the library and run the model initiative init model.m script
+2. Navigate to the main folder of the library and run the ```model_initiative_init_model``` script
 3. Run the model server matlab function with the right set of arguments.
 model server(no intervals,model name and args,detector name and args, model language,detector language)
 If the model and the detector are both in matlab, there is no nedd to precise the detector language,
@@ -159,7 +161,7 @@ or
 ```python -c "from model_server_python import model_server_python; model_server_python(2,'goodman_brette_2010_python(wave,20,0.05)','argmax_python(pathway_out)','python','python')"```
 
 You can also check the available detectors and models by running the check available detectors and
-check available models function located in the model server folder. Note though that all detectors will not
+```check_available_models``` function located in the *model_server* folder. Note though that all detectors will not
 work with all pathway models (see table in appendix)
 
 ## Features to be aware of
@@ -167,23 +169,23 @@ work with all pathway models (see table in appendix)
 ### Choice of model and model arguments, detector and detector arguments
 Amongst the arguments of the model server function, two of them are of particular importance:
 
-* model name and args refers to the name of the chosen model and the set of arguments chosen by the
+* *model_name_and_args* refers to the name of the chosen model and the set of arguments chosen by the
 user to run the model with. The first argument should always be wave, which refers to the dual channel
 sound array. Matlab pathway models often require the samplerate as argument. Use fs to refer to the
 samplerate and place it at the second position in the argument list.
 
-* detector name and args refers to the name of the chosen detector and the set of arguments chosen
+* *detector_name_and_args* refers to the name of the chosen detector and the set of arguments chosen
 by the user to run the detector with. The first argument of the detector function should always be
-pathway out.
-pathway out is the name of the structure that the pathway model output. If the model is in matlab,
-pathway out is a cell.
+*pathway_out*.\
+*pathway_out* is the name of the structure that the pathway model output. If the model is in matlab,
+*pathway_out* is a cell.
 
 ### Model language and detector language arguments
 
-When the model server python is used to call the model and detector, the model language and the
+When the ```model_server_python``` function is used to call the model and detector, the model language and the
 detector language must be provided as the two last arguments of the function. The different choices the user
-can pick are : matlab,octave and python.
-When the model server (ie the matlab/octave model server) function is used to call the model and
+can pick are : *matlab*,*octave* and *python*.
+When the ```model_server``` (ie the matlab/octave model server) function is used to call the model and
 detector, only the model language field is mandatory if both model and detector are both run with the same
 language (matlab or octave). If the model and the detector are written in different languages or if they are
 both written in python then the detector language should be provided as well.
