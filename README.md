@@ -192,7 +192,7 @@ both written in python then the detector language should be provided as well.
 
 ## Appendix
 ### Table of compatible experiments/models/detectors
-
+![alt](table.png)
 
 
 
