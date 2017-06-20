@@ -10,7 +10,7 @@ models and detectors in the context of a model comparison framework described in
 A: Classic experiment in psychoacoustics B: Structure of the model comparison framework, models process
 sounds output by the experiment side.The output of the model is then fed to the detector which comes up with a decision/
 
-From the figure below, two sides can be observed: the experiment side and the model/detector side/
+From the figure below, two sides can be observed: the experiment side and the model/detector side
 
 ## Launching the experiment side
 Launching the experiment side requires a couple of matlab toolboxes:
@@ -37,7 +37,7 @@ or
 
 ```afc main('van de Par Kohlrausch 1999','ModelInitiative','breebaart1','500');```
 
-The available afc experiments are located in the */experiments/afc* folder.\
+The available afc experiments are located in the */experiments/afc* folder.
 
 ## Launching the model/detector side
 
@@ -48,7 +48,7 @@ or python command line). The main idea behind that is to create threads in which
 run. These threads are created and closed automatically when the user runs either the model server matlab
 function or the *model_server_python* function. Because the way to launch matlab,octave or python threads
 varies with the platform that the user runs (Windows, MacOS, Linux), some small editing/configuring might
-be necessary to use the library. Those edits will be explained further in the following subsections.\
+be necessary to use the library. Those edits will be explained further in the following subsections.
 
 ### Minimum requirements for the matlab user
 
@@ -91,7 +91,7 @@ do so please follow the instructions:
 4. A dialogue should pop up with a link on the left called ”Advanced system settings”. Click it.
 5. In the System Properties dialogue, click the button called ”Environment Variables”.
 6. In the Environment Variables dialogue look for ”Path” under the System Variables window.
-7. Add ```’;C:\Octave-4.0.0\bin’``` to the end of it. The semicolon is the path separator on windows.
+7. Add ```;C:\Octave-4.0.0\bin``` to the end of it. The semicolon is the path separator on windows.
 8. Click Ok and close the dialogues.
 
 * For Linux users: Matlab runs bash commands using its own version of libstdc++, that version might
