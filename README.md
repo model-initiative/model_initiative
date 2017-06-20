@@ -188,9 +188,10 @@ language (matlab or octave). If the model and the detector are written in differ
 both written in python then the detector language should be provided as well.
 
 ## Call graph
+![alt](graph.png)
 
-
-
+## Appendix
+### Table of compatible experiments/models/detectors
 
 
 
