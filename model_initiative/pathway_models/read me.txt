@@ -1,0 +1,2 @@
+This folder includes all models and model call scripts. Models from toolboxes are not included but may be copied to this folder on your local device.
+A model takes ONE 2-ch signal and puts out an internal representation vector or struct.

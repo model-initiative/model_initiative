@@ -1,0 +1,2 @@
+Use this folder for any plot scripts, either specific to an experiment or generic for several experiments from a certain experimental environment.
+Scripts should find data in path model_framework.datapath or in the respective folder of the experiment software.

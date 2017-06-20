@@ -1,0 +1,11 @@
+This is a quick description of how to run a simple N_0 S_pi (3-AFC constant stimulus) example
+
+1. start Matlab
+2. run model_initiative_init_experiment
+3. run N0Spi_example;
+
+4. start 2nd Matlab
+5. run model_initiative_init_model
+6. run model_server(3,'super_simple_EI(wave,0.01)','largest_residual(pathway_out)',0)
+
+7. data will be stored in model_initative\data folder.

@@ -1,0 +1,13 @@
+This is a quick description of how to operate the model framework in case both experiment and model are in Matlab
+
+1. start Matlab
+2. run model_initiative_init_experiment
+3. run experiment (make sure your experiment software is correctly configured i.e. paths have been set)
+
+4. start 2nd Matlab
+5. run model_initiative_init_model
+6. run model_server and specify the model function call and decision stage function call
+
+7. wait...programs running
+8. data will be stored as specified in the experiment function. Ideally in the model_initative\data folder.
+9. View/plot/analyze ideally using the first "experiment" Matlab
