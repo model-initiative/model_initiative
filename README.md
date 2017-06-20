@@ -1,5 +1,5 @@
 # README #
-
+## Version 0.1
 ## Introduction
 
 This document aims to describe how to use matlab/octave and/or python to launch auditory pathway
