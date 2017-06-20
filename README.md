@@ -57,18 +57,18 @@ To run python examples, the python requirements must be satisfied as well
 
 * Octave above 4.0.0
 * Packages nan,statistics, signal, control, io /
-  + https://octave.sourceforge.io/control/
-  + https://octave.sourceforge.io/io/
-  + https://octave.sourceforge.io/nan/
-  + https://octave.sourceforge.io/signal/
-  + https://octave.sourceforge.io/statistics/
+  - https://octave.sourceforge.io/control/
+  - https://octave.sourceforge.io/io/
+  - https://octave.sourceforge.io/nan/
+  - https://octave.sourceforge.io/signal/
+  - https://octave.sourceforge.io/statistics/
 
 ### Minimum requirements for the python2 user
 
 * Python 2.7
 * Recommended to run most available python model and detector examples:
- + Brian: http://briansimulator.org/
- + Brian2: https://brian2.readthedocs.io/en/stable/
+  - Brian: http://briansimulator.org/
+  - Brian2: https://brian2.readthedocs.io/en/stable/
 
 Both libraries should be installed to guarantee full functionality. To run matlab examples, matlab
 requirements must be satisfied as well.
@@ -104,12 +104,12 @@ path. Everything else should work well after that change.
  files are not directly callable from the command line. To change that, a couple of symbolic links must
  be set up.
 
- + For matlab: Open a terminal window, from there type:
+  - For matlab: Open a terminal window, from there type:
  ``` sudo ln -s /path to your matlab bin /usr/local/bin/matlab ```
   The matlab binary file is usually located at /Applications/MATLAB RXXXX/bin/matlab where
   XXXX is the version of matlab.
  
- + For Octave: Open a terminal window,from there type:
+  - For Octave: Open a terminal window,from there type:
  ``` sudo ln -s /path to your octave-cli-XXX bin /usr/local/bin/octave-cli ```
  Usually, the octave-cli-XXX binary file is located at:
  /Applications/Octave.app/Contents/Resources/usr/Cellar/octave/X.X.X/bin/octave-cli-X.X.X, where
