@@ -63,7 +63,58 @@ To run python examples, the python requirements must be satisfied as well
   * https://octave.sourceforge.io/signal/
   * https://octave.sourceforge.io/statistics/
 
+#### Minimum requirements for the python2 user
 
+* Python 2.7
+* Recommended to run most available python model and detector examples:
+ * Brian: http://briansimulator.org/
+ * Brian2: https://brian2.readthedocs.io/en/stable/
+
+Both libraries should be installed to guarantee full functionality. To run matlab examples, matlab
+requirements must be satisfied as well.
+
+#### Set up and configuration depending on the user’s OS
+The model and detector threads are launched from the python model server call.m, matlab model server call.py
+and from the detector interface python.py and detector interface matlab.m functions located in the model server
+folder(see call graph below).
+
+* For Windows users: If you want to use Octave, you might have to add to your PATH environment
+variable the bin folder of the Octave library. Once this is done, everything should work normally. To
+do so please follow the instructions:
+
+1. Go to the Windows Start Menu
+2. Right Click ”Computer”
+3. Select ”Properties”
+4. A dialogue should pop up with a link on the left called ”Advanced system settings”. Click it.
+5. In the System Properties dialogue, click the button called ”Environment Variables”.
+6. In the Environment Variables dialogue look for ”Path” under the System Variables window.
+7. Add ’;C:\Octave-4.0.0\bin’ to the end of it. The semicolon is the path separator on windows.
+8. Click Ok and close the dialogues.
+
+* For Linux users: Matlab runs bash commands using its own version of libstdc++, that version might
+be incompatible with the one that exists on your system. A fix to it is to export to your library PATH
+the path to the directory where the libstdc++.so.6 file is. On many computers that path is located in
+the directory /usr/lib/i386-linux-gnu. If on your computer that path is located somewhere else then
+please edit the detector interface matlab.m and the python model server call.m and change the path
+in all commands starting with export LD LIBRARY PATH=/usr/lib/i386-linux-gnu with your own
+path. Everything else should work well after that change.
+
+* For the MacOS users: it is assumed that Matlab and Octave were installed by the user in the Applica-
+tions folder (default folder used by MacOS when software is installed). The matlab and octave binary
+files are not directly callable from the command line. To change that, a couple of symbolic links must
+be set up.
+
+ * For matlab: Open a terminal window, from there type:
+ ``` sudo ln -s /path to your matlab bin /usr/local/bin/matlab ```
+  The matlab binary file is usually located at /Applications/MATLAB RXXXX/bin/matlab where
+ XXXX is the version of matlab.
+ 
+ * For Octave: Open a terminal window,from there type:
+ ``` sudo ln -s /path to your octave-cli-XXX bin /usr/local/bin/octave-cli ```
+ Usually, the octave-cli-XXX binary file is located at:
+/Applications/Octave.app/Contents/Resources/usr/Cellar/octave/X.X.X/bin/octave-cli-X.X.X, where
+X.X.X is the version number.
+ 
 
 
 
