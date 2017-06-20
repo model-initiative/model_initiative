@@ -28,11 +28,11 @@ You can now open a matlab instance, navigate to the main model initiative folder
 script to add the necessary paths to the matlab path.
 From there you can run for instance the following:
 
-'''afc_main('KleinHennig2011','ModelInitiative','identifierXY','4');'''
+```afc_main('KleinHennig2011','ModelInitiative','identifierXY','4');```
 
 or
 
-'''afc main('van de Par Kohlrausch 1999','ModelInitiative','breebaart1','500');'''
+```afc main('van de Par Kohlrausch 1999','ModelInitiative','breebaart1','500');```
 
 The available afc experiments are located in the /experiments/afc folder.
 
