@@ -23,8 +23,6 @@ tory to run most experiments)
 
 The easiest way to set it up is probably to uncompress the afc folder after downloading it and copy/paste
 it in the main *model_initiative* repo (ie where the other folders *model_server*, *fileexchange*... are).
-When this is done, one small edit has to be made, open the file */afc/base/default_cfg* and at line 704,
-replace the line ```def.clearGlobals = 1;``` by ```def.clearGlobals = [1 1 1 1 1 0];```
 You can now open a matlab instance, navigate to the main *model_initiative* folder and run the\
 ```model_initiative_experiment_init```
 
