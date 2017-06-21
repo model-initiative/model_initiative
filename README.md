@@ -26,7 +26,7 @@ it in the main *model_initiative* repo (ie where the other folders *model_server
 You can now open a matlab instance, navigate to the main *model_initiative* folder and run the\
 ```model_initiative_experiment_init```
 
-script to add the necessary paths to the matlab path.\
+script to add the necessary paths to the matlab path. Then run ```AFC_init```.\
 From there you can run for instance the following:
 
 ```afc_main('KleinHennig2011','ModelInitiative','identifierXY','4');```
