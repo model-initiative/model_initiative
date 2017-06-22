@@ -1,5 +1,8 @@
 # README #
 ## Version 0.1
+For a quick start see quick_start.txt and quick_example.txt minside the model_initiative folder.
+
+
 ## Introduction
 
 This document aims to describe how to use matlab/octave and/or python to launch auditory pathway
