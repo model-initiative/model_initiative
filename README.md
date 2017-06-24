@@ -27,8 +27,7 @@ tory to run most experiments)
 The easiest way to set it up is probably to uncompress the afc folder after downloading it and copy/paste
 it in the main *model_initiative* repo (ie where the other folders *model_server*, *fileexchange*... are).
 You can now open a matlab instance, navigate to the main *model_initiative* folder and run the\
-```model_initiative_experiment_init```
-
+```model_initiative_init_experiment```
 script to add the necessary paths to the matlab path. Then run ```AFC_init```.\
 From there you can run for instance the following:
 
@@ -36,7 +35,7 @@ From there you can run for instance the following:
 
 or
 
-```afc main('van de Par Kohlrausch 1999','ModelInitiative','breebaart1','500');```
+```afc_main('van_de_Par_Kohlrausch_1999','ModelInitiative','breebaart1','500');```
 
 The available afc experiments are located in the */experiments/afc* folder.
 
