@@ -130,15 +130,14 @@ side and the detector side
 * *plot* routine folder contains a set of function to plot the results store in the data folder
 
 ## Quick start
-Once the requirements are satisfied, download the model initiative folder, then sssuming the experiment
-side is already launched:
+Once the requirements are satisfied, assuming the experiment side is already launched:
 
 ### For the matlab/octave user
 1. Open a matlab/octave desktop
 2. Navigate to the main folder of the library and run the ```model_initiative_init_model``` script
 3. Run the model server matlab function with the right set of arguments.
 model server(no intervals,model name and args,detector name and args, model language,detector language)
-If the model and the detector are both in matlab, there is no nedd to precise the detector language,
+If the model and the detector are both in matlab, there is no need to precise the detector language,
 just use:
 ``` model_server(2,'klein_hennig_2011(wave,fs,0.18,0)','argmin(pathway_out)','matlab')```
 
