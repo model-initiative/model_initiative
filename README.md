@@ -38,7 +38,10 @@ The available afc experiments are located in the */experiments/afc* folder.
 
 ### Setting up the AMT toolbox 
 Download the latest version, place the uncompressed folder in the *model_initiative* folder.You can now open a matlab instance, navigate to the main *model_initiative* folder and run the ```model_initiative_init_experiment``` script to add the necessary paths to the matlab path. Then follow the instructions provided in the *readme* files in the *thirdparty* folder of folder to install *ltfat* and *sfs*.Then add the *amt*folder to your matlab path and then run the ```AMT_init``` script to set up AMT. The AMT toolbox is needed if the user wants to run the Breebaart 2001 model and detector. AMT can also run experiments. For instance: ```exp breebaart2001(’bﬁg3’,’redo’,’BInit’,’directory’,simwork.iopath);```
-
+if this error occurs : 
+*Error using ltfatarghelper
+[ERROR] (../../mex/ltfatarghelper.c:491:) struc is NULL*, please close matlab, go to *ltfat/mex* and delete the file *ltfatarghelper.mexw64*. You can then restart matlab and it should work.
+ 
 
 ## Launching the model/detector side
 
