@@ -139,7 +139,7 @@ just use:
 
 however if the model and the detector are in different language use for instance:
 
-``` model_server(2,'klein_hennig_2011_python(wave, 0.18,None)','argmin(pathway_out)','python','matlab')```
+``` model_server(2,'klein_hennig_2011_python(wave,0.18,None)','argmin(pathway_out)','python','matlab')```
 or
 ``` model_server(2,'klein_hennig_2011(wave,fs,0.18,0)','argmin_python(pathway_out)','matlab','python') ```
 or
@@ -147,7 +147,7 @@ or
 
 ### For the python2 user
 
-1. using a command terminal, navigate to the model server folder
+1. using a command terminal, navigate to the *model_server* folder
 2. From there run for instance:
 ```python -c "from model_server_python import model_server_python; model_server_python(2,'klein_hennig_2011_python(wave,0.18,None)','argmin_python(pathway_out)','python','python')" ```
 or
