@@ -37,7 +37,7 @@ From there you can run for instance the following:
 The available afc experiments are located in the */experiments/afc* folder.
 
 ### Setting up the AMT toolbox 
-Download the latest version, place the uncompressed folder in the *model_initiative* folder.You can now open a matlab instance, navigate to the main *model_initiative* folder and run the ```model_initiative_init_experiment``` script to add the necessary paths to the matlab path. Then run the ```AMT_init``` to set up AMT. The AMT toolbox is needed if the user wants to run the Breebaart 2001 model and detector. AMT can also run experiments. For instance: ```exp breebaart2001(’bﬁg3’,’redo’,’BInit’,’directory’,simwork.iopath);```
+Download the latest version, place the uncompressed folder in the *model_initiative* folder.You can now open a matlab instance, navigate to the main *model_initiative* folder and run the ```model_initiative_init_experiment``` script to add the necessary paths to the matlab path. Then follow the instructions provided in the *readme* files in the *thirdparty* folder of folder to install *ltfat* and *sfs*. Then run the ```AMT_init``` to set up AMT. The AMT toolbox is needed if the user wants to run the Breebaart 2001 model and detector. AMT can also run experiments. For instance: ```exp breebaart2001(’bﬁg3’,’redo’,’BInit’,’directory’,simwork.iopath);```
 
 
 ## Launching the model/detector side
