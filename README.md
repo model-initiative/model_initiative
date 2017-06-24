@@ -33,10 +33,6 @@ From there you can run for instance the following:
 
 ```afc_main('KleinHennig2011','ModelInitiative','identifierXY','4');```
 
-or
-
-```afc_main('van_de_Par_Kohlrausch_1999','ModelInitiative','breebaart1','500');```
-
 The available afc experiments are located in the */experiments/afc* folder.
 
 ## Launching the model/detector side
