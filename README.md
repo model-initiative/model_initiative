@@ -202,7 +202,7 @@ both written in python then the detector language should be provided as well.
 If you would like to contribute to the project by adding experiment, model or detector scripts, please check out the *theinterface.pdf* document in the *model_initiative* directory for more technical information on how to do so.
 
 ## Contact
-If you have any question about the project, or the matlab part of the code,  please contact Mathias Dietz at : 
+If you have any question regarding the project, or the matlab part of the code,  please contact Mathias Dietz at : 
 mdietz@uwo.ca
 
 For any question about the python part, please contact Jean-Hugues Lestang at:
