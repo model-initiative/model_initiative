@@ -1,6 +1,6 @@
 # README #
 ## Version 0.1
-For a quick start see quick_start.txt and quick_example.txt inside the *model_initiative* folder.
+For a quick start see quick_start.txt and quick_example.txt in the *model_initiative* folder.
 
 
 ## Introduction
@@ -16,7 +16,7 @@ sounds output by the experiment side.The output of the model is then fed to the 
 From the figure below, two sides can be observed: the experiment side and the model/detector side
 
 ## Launching the experiment side
-The experiment side is in charge of generating the sound files (.wav) located in the *fileexchange* folder that will then 
+The experiment side is in charge of generating the sound files (.wav) located in the *fileexchange* folder which will then 
 be processed by the model side. 
 Launching the experiment side requires a couple of matlab toolboxes (note that they are not all mandatory for a quick start):
 * the AFC toolbox can be found at: http://medi.uni-oldenburg.de/afc/
@@ -32,7 +32,7 @@ You can now open a matlab instance, navigate to the main *model_initiative* fold
 ```model_initiative_init_experiment```
 script to add the necessary paths to the matlab path. Then run ```AFC_init```.
 After that navigate to the *afc* folder and run the ```afc_addpath``` script.
-From there you can run for instance the following:
+After that, you can run for instance the following:
 
 ```afc_main('KleinHennig2011','ModelInitiative','identifierXY','4');```
 
@@ -42,7 +42,7 @@ The available afc experiments are located in the */experiments/afc* folder.
 Download the latest version, place the uncompressed folder in the *model_initiative* folder.You can now open a matlab instance, navigate to the main *model_initiative* folder and run the ```model_initiative_init_experiment``` script to add the necessary paths to the matlab path. Then follow the instructions provided in the *readme* files in the *thirdparty* folder of folder to install *ltfat* and *sfs*.Then add the *amt*folder to your matlab path and then run the ```AMT_init``` script to set up AMT. The AMT toolbox is needed if the user wants to run the Breebaart 2001 model and detector. AMT can also run experiments. For instance: ```exp breebaart2001(’bﬁg3’,’redo’,’BInit’,’directory’,simwork.iopath);```
 if this error occurs : 
 *Error using ltfatarghelper
-[ERROR] (../../mex/ltfatarghelper.c:491:) struc is NULL*, please close matlab, go to *ltfat/mex* and delete the file *ltfatarghelper.mexw64*. You can then restart matlab and it should work.
+[ERROR] (../../mex/ltfatarghelper.c:491:) struc is NULL*, please close matlab, go to *ltfat/mex* and delete the file *ltfatarghelper.mexw64*. You can then restart matlab and things should work.
  
 
 ## Launching the model/detector side
@@ -54,7 +54,7 @@ or python command line). The main idea behind that is to create threads in which
 run. These threads are created and closed automatically when the user runs either the model server matlab
 function or the *model_server_python* function. Because the way to launch matlab,octave or python threads
 varies with the platform that the user runs (Windows, MacOS, Linux), some small editing/configuring might
-be necessary to use the library. Those edits will be explained further in the following subsections.
+be necessary to use the library. These edits will be explained further in the following subsections.
 
 ### Minimum requirements for the matlab user
 
@@ -83,7 +83,7 @@ Both libraries should be installed to guarantee full functionality. To run matla
 requirements must be satisfied as well.
 
 ### Set up and configuration depending on the user’s OS
-The model and detector threads are launched from the python model server call.m, matlab model server call.py
+The model and detector threads are launched from the *python_model_server_call.m*, *matlab_model_server_call.py*
 and from the *detector_interface_python.py* and *detector_interface_matlab.m* functions located in the *model_server*
 folder(see call graph below).
 
@@ -104,7 +104,7 @@ do so please follow the instructions:
 be incompatible with the one that exists on your system. A fix to it is to export to your library PATH
 the path to the directory where the libstdc++.so.6 file is. On many computers that path is located in
 the directory ```/usr/lib/i386-linux-gnu``` . If on your computer that path is located somewhere else then
-please edit the *detector_interface_matlab.m* and the python model server call.m and change the path
+please edit the *detector_interface_matlab.m* and the *python_model_server_call.m* and change the path
 in all commands starting with ```export LD_LIBRARY_PATH=/usr/lib/i386-linux-gnu``` with your own
 path. Everything else should work well after that change.
 
@@ -126,14 +126,14 @@ path. Everything else should work well after that change.
 
 ## Quick description of the organization of the library
 * *fileexchange* folder hosts the different files that are exchanged between the experiment side, the model
-side and the detector side
-* *pathway_model* folder stores the available models written in any language (matlab,octave or python)
-* *decision_stage* folder stores the available detectors written in any language
+side and the detector side.
+* *pathway_model* folder stores the available models written in any language (matlab,octave or python).
+* *decision_stage* folder stores the available detectors written in any language.
 * *Experiment* files (either AFC, AMT or your own) can be found in the experiment folder.
 * *model_server* folder stores the matlab and python function used to interface experiments, models and
- detectors (see call graph)
+ detectors (see call graph).
 * *data* folder stores the results produced on the experiment side.
-* *plot* routine folder contains a set of function to plot the results store in the data folder
+* *plot* routine folder contains a set of function to plot the results store in the data folder.
 
 ## Quick start
 Once the requirements are satisfied, assuming the experiment side is already launched:
@@ -165,7 +165,7 @@ or
 or
 ```python -c "from model_server_python import model_server_python; model_server_python(2,'goodman_brette_2010_python(wave,20,0.05)','argmax_python(pathway_out)','python','python')"```
 
-You can also check the available detectors and models by running the check available detectors and
+You can also check the available detectors and models by running the ```check_available_detectors``` and
 ```check_available_models``` function located in the *model_server* folder. Note though that all detectors will not
 work with all pathway models (see table in appendix)
 
@@ -205,7 +205,7 @@ If you would like to contribute to the project by adding experiment, model or de
 If you have any question regarding the project, or the matlab part of the code,  please contact Mathias Dietz at : 
 mdietz@uwo.ca
 
-For any question about the python part, please contact Jean-Hugues Lestang at:
+For any question regarding the python part, please contact Jean-Hugues Lestang at:
 j.lestang15@imperial.ac.uk
 
 ## Appendix
