@@ -11,7 +11,7 @@ models and detectors in the context of a model comparison framework described in
 ![alt](schema.png)
 \
 A: Classic experiment in psychoacoustics B: Structure of the model comparison framework, models process
-sounds output by the experiment side.The output of the model is then fed to the detector which comes up with a decision/
+sounds output by the experiment side.The output of the model is then fed to the detector which comes up with a decision.
 
 From the figure below, two sides can be observed: the experiment side and the model/detector side
 
@@ -48,7 +48,7 @@ if this error occurs :
 ## Launching the model/detector side
 
 Comparing different computational models can be challenging when models are written in different lan-
-guages. The Model Initiative library addresses that issue by allowing the user to launch matlab/octave
+guages. The model_initiative library addresses that issue by allowing the user to launch matlab/octave
 models and detectors as well as python models and detectors from a common command line (either matlab
 or python command line). The main idea behind that is to create threads in which models and detectors
 run. These threads are created and closed automatically when the user runs either the model server matlab
