@@ -50,7 +50,7 @@ Comparing different computational models can be challenging when models are writ
 guages. The model_initiative library addresses that issue by allowing the user to launch matlab/octave
 models and detectors as well as python models and detectors from a common command line (either matlab
 or python command line). The main idea behind that is to create threads in which models and detectors
-run. These threads are created and closed automatically when the user runs either the model server matlab
+run. These threads are created and closed automatically when the user runs either the *model_server* matlab
 function or the *model_server_python* function. Because the way to launch matlab,octave or python threads
 varies with the platform that the user runs (Windows, MacOS, Linux), some small editing/configuring might
 be necessary to use the library. These edits will be explained further in the following subsections.
@@ -141,7 +141,7 @@ Once the requirements are satisfied, assuming the experiment side is already lau
 1. Open a matlab/octave desktop
 2. Navigate to the main folder of the library and run the ```model_initiative_init_model``` script
 3. Run the model server matlab function with the right set of arguments.
-model server(no intervals,model name and args,detector name and args, model language,detector language)
+*model_server(no_intervals,model_name_and_args,detector_name_and_args, model_language,detector_language)*
 If the model and the detector are both in matlab, there is no need to precise the detector language,
 just use:
 ``` model_server(2,'klein_hennig_2011(wave,fs,0.18,0)','argmin(pathway_out)','matlab')```
