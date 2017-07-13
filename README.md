@@ -146,7 +146,7 @@ If the model and the detector are both in matlab, there is no need to precise th
 just use:
 ``` model_server(2,'klein_hennig_2011(wave,fs,0.18,0)','argmin(pathway_out)','matlab')```
 
-however if the model and the detector are in different language use for instance:
+however if the model and the detector are written in different languages use for instance:
 
 ``` model_server(2,'klein_hennig_2011_python(wave,0.18,None)','argmin(pathway_out)','python','matlab')```
 or
@@ -174,7 +174,7 @@ work with all pathway models (see table in appendix)
 Amongst the arguments of the model server function, two of them are of particular importance:
 
 * *model_name_and_args* refers to the name of the chosen model and the set of arguments chosen by the
-user to run the model with. The first argument should always be wave, which refers to the dual channel
+user to run the model with. The first argument should always be *wave*, which refers to the dual channel
 sound array. Matlab pathway models often require the samplerate as argument. Use fs to refer to the
 samplerate and place it at the second position in the argument list.
 
