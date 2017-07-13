@@ -175,7 +175,7 @@ Amongst the arguments of the model server function, two of them are of particula
 
 * *model_name_and_args* refers to the name of the chosen model and the set of arguments chosen by the
 user to run the model with. The first argument should always be *wave*, which refers to the dual channel
-sound array. Matlab pathway models often require the samplerate as argument. Use fs to refer to the
+sound array. Matlab pathway models often require the samplerate as argument. Use *fs* to refer to the
 samplerate and place it at the second position in the argument list.
 
 * *detector_name_and_args* refers to the name of the chosen detector and the set of arguments chosen
