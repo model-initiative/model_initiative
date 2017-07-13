@@ -64,7 +64,7 @@ To run python examples, the python requirements must be satisfied as well
 ### Minimum requirements for the octave user
 
 * Octave above 4.0.0
-* Packages nan,statistics, signal, control, io \
+* Packages nan,statistics, signal, control, io 
   - https://octave.sourceforge.io/control/
   - https://octave.sourceforge.io/io/
   - https://octave.sourceforge.io/nan/
