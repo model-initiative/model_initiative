@@ -195,7 +195,7 @@ language (matlab or octave). If the model and the detector are written in differ
 both written in python then the detector language should be provided as well.
 
 ## Call graph
-![alt](graph.png)
+![alt](./images/graph.png)
 
 ## Contributing
 If you would like to contribute to the project by adding experiment, model or detector scripts, please check out the *theinterface.pdf* document in the *model_initiative* directory for more technical information on how to do so.
@@ -209,7 +209,7 @@ j.lestang15@imperial.ac.uk
 
 ## Appendix
 ### Table of compatible experiments/models/detectors
-![alt](table.png)
+![alt](./images/table.png)
 
 
 
