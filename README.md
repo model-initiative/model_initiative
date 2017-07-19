@@ -1,6 +1,6 @@
 # README #
 ## Version 0.1
-For a quick start see quick_start.txt and quick_example.txt in the *model_initiative* folder.
+For a quick start with Matlab see quick_start.txt and quick_example.txt in the *model_initiative* folder.
 
 
 ## Introduction
