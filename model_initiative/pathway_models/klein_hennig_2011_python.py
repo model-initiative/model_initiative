@@ -1,4 +1,4 @@
-# The class "NCC" below handles the processing of the intervals by a cross
+# The function "NCC" below handles the processing of the intervals by a cross
 # correlation model with or without adaptation loops###
 from brian2 import *
 from brian2.hears import *
