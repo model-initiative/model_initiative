@@ -46,8 +46,8 @@ if this error occurs :
 
 ## Launching the model/detector side
 
-Comparing different computational models can be challenging when models are written in different lan-
-guages. The model_initiative library addresses that issue by allowing the user to launch matlab/octave
+Comparing different computational models can be challenging when models are written in different 
+languages. The model_initiative library addresses that issue by allowing the user to launch matlab/octave
 models and detectors as well as python models and detectors from a common command line (either matlab
 or python command line). The main idea behind that is to create threads in which models and detectors
 run. These threads are created and closed automatically when the user runs either the *model_server* matlab
