@@ -152,7 +152,7 @@ however if the model and the detector are written in different languages use for
 or
 ``` model_server(2,'klein_hennig_2011(wave,fs,0.18,0)','argmin_python(pathway_out)','matlab','python') ```
 or
-``` model server(2,'goodman_brette_2010_python(wave,20,0.05)','argmax_python(pathway_out)','python','python')```
+``` model_server(2,'goodman_brette_2010_python(wave,20,0.05)','argmax_python(pathway_out)','python','python')```
 
 ### For the python2 user
 
