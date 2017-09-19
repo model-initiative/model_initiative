@@ -6,7 +6,7 @@ from brian2.hears import *
 
 def goodman_brette_2010_python(soundtest, number_neurons=20, noise=0.05):
     sound = Sound((soundtest[0], soundtest[1]))
-    ## Create an hrtfset of number_nuerons itds ##
+    ## Create an hrtfset of number_neurons itds ##
     hset = HeadlessDatabase(itd=np.linspace(
         0, 0.002, number_neurons), fractional_itds=False).load_subject()
     num_indices = hset.num_indices
@@ -25,7 +25,7 @@ def goodman_brette_2010_python(soundtest, number_neurons=20, noise=0.05):
 		I : 1
 	    '''
 
-    G = FilterbankGroup(cochlea, 'V', eqs, threshold='V>1',
+    G = FilterbankGroup(cochlea, 'I', eqs, threshold='V>1',
                         reset='V=0', refractory=5 * ms)
 
     ###Coincidence detector neurons ###
