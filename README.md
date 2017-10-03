@@ -21,7 +21,7 @@ be processed by the model side.
 Launching the experiment side requires a couple of matlab toolboxes (note that they are not all mandatory for a quick start):
 * the AFC toolbox can be found at: http://medi.uni-oldenburg.de/afc/
 * the AMT toolbox development version can be found at: https://sourceforge.net/p/amtoolbox/code/ci/master/tree/
-* the binaural cross-correlogram toolbox by Michael Akeroyd (not currently available but also not mandatory to run most experiments)
+* the binaural cross-correlogram toolbox by Michael Akeroyd can be found at: https://rdmc.nottingham.ac.uk/handle/internal/324
 
 ### Setting up the AFC toolbox
 
@@ -42,6 +42,10 @@ Download the latest version, place the uncompressed folder in the *model_initiat
 if this error occurs : 
 *Error using ltfatarghelper
 [ERROR] (../../mex/ltfatarghelper.c:491:) struc is NULL*, please close matlab, go to *ltfat/mex* and delete the file *ltfatarghelper.mexw64*. You can then restart matlab and things should work.
+ 
+ 
+### Setting up the AFC toolbox
+After downloading the toolbox, it is recommended to place it in the *pathway_model* folder (although any other directory in the matlab path would work as well). Additional files to run the ```Bernstein_Trahiotis_crosscor_2012``` pathway model and the ```centroid_lateralization``` detector can be found in the */pathway_models/additional_Bernstein_Trahiotis_files* folder.
  
 
 ## Launching the model/detector side
