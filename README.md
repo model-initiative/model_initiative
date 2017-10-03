@@ -44,7 +44,7 @@ if this error occurs :
 [ERROR] (../../mex/ltfatarghelper.c:491:) struc is NULL*, please close matlab, go to *ltfat/mex* and delete the file *ltfatarghelper.mexw64*. You can then restart matlab and things should work.
  
  
-### Setting up the AFC toolbox
+### Setting up the binaural cross-correlogram toolbox
 After downloading the toolbox, it is recommended to place it in the *pathway_model* folder (although any other directory in the matlab path would work as well). Additional files to run the ```Bernstein_Trahiotis_crosscor_2012``` pathway model and the ```centroid_lateralization``` detector can be found in the */pathway_models/additional_Bernstein_Trahiotis_files* folder.
  
 
