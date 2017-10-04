@@ -1,6 +1,5 @@
 function [output_centroid] = mccgramcentroid_BT(correlogram, infoflag)
 %Author Leslie R Bernstein
-%Additional comments and editing Jean-Hugues Lestang
 %This file is intended to be used an an optional appendix to the binaural cross-correlogram toolbox written by Michael Akeroyd.  
 
 % function [output_centroid] = 
