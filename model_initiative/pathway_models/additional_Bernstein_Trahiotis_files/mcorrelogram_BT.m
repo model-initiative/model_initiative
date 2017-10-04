@@ -1,8 +1,7 @@
 function [output_correlogram] = mcorrelogram_BT(lowfreq, highfreq, filterdensity, mindelay, maxdelay, transduction, binauralswitch, wave, infoflag)
 
 %Author Leslie R Bernstein
-%Additional comments and editing Jean-Hugues Lestang
-%This file is intended to be used an an optional appendix to the binaural cross-correlogram toolbox written by Michael Akeroyd.
+%This file is intended to be used as an optional appendix to the binaural cross-correlogram toolbox written by Michael Akeroyd.
 
 %Calls mmonauraltransduction_BT which includes Stern/Shear front end
 
