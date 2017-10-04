@@ -1,6 +1,5 @@
 function [multichanneldata2, output_powervector, output_maxvector] = monauraltransduction_BT(multichanneldata, transduction, samplefreq, infoflag);
 %Author Leslie R Bernstein
-%Additional comments and editing Jean-Hugues Lestang
 %This file is intended to be used an an optional appendix to the binaural cross-correlogram toolbox written by Michael Akeroyd.  
 % function [multichanneldata2, output_powervector, output_maxvector] = mmonauraltransduction(multichannelinput, transduction, samplefreq, infoflag);
 % 
