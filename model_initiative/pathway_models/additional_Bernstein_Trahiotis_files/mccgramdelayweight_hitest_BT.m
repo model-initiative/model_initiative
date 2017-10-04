@@ -1,7 +1,6 @@
 function [output_correlogram, output_delayweight] = mccgramdelayweight_hitest_BT(correlogram, ptswitch, forcefrequency, infoflag);
 %Author Leslie R Bernstein
-%Additional comments and editing Jean-Hugues Lestang
-%This file is intended to be used an an optional appendix to the binaural cross-correlogram toolbox written by Michael Akeroyd.
+%This file is intended to be used as an optional appendix to the binaural cross-correlogram toolbox written by Michael Akeroyd.
 
 % function [output_correlogram, output_delayweight] = 
 % mccgramdelayweight(correlogram, ptswitch, infoflag);
