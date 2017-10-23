@@ -21,7 +21,7 @@ be processed by the model side.
 Launching the experiment side requires a couple of matlab toolboxes (note that they are not all mandatory for a quick start):
 * the AFC toolbox can be found at: http://medi.uni-oldenburg.de/afc/
 * the AMT toolbox development version can be found at: https://sourceforge.net/p/amtoolbox/code/ci/master/tree/
-* the binaural cross-correlogram toolbox by Michael Akeroyd can be found at: https://rdmc.nottingham.ac.uk/handle/internal/324
+* the binaural cross-correlogram toolbox can be found at: https://rdmc.nottingham.ac.uk/handle/internal/324
 
 ### Setting up the AFC toolbox
 
