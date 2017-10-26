@@ -1,6 +1,6 @@
 function detector_interface_matlab(detector_name_and_args,detector_language)
 %The role of this function is to launch a seperate thread in which the detector chosen by the user will run
-%Users don't have to call that function themsevessince it will be automatically called by the model_server function 
+%Users don't have to call that function themselves since it will be automatically called by the model_server function 
 
 
 global model_framework
