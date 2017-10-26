@@ -105,7 +105,7 @@ do so please follow the instructions:
 
 * For Linux users: Matlab runs bash commands using its own version of libstdc++, that version might
 be incompatible with the one that exists on your system. A fix to it is to export to your library PATH
-the path to the directory where the libstdc++.so.6 file is. On many computers that path is located in
+the path to the directory where the *libstdc++.so.6* file is. On many computers that path is located in
 the directory ```/usr/lib/i386-linux-gnu``` . If on your computer that path is located somewhere else then
 please edit the *detector_interface_matlab.m* and the *python_model_server_call.m* and change the path
 in all commands starting with ```export LD_LIBRARY_PATH=/usr/lib/i386-linux-gnu``` with your own
@@ -133,7 +133,7 @@ side and the detector side.
 * *pathway_model* folder stores the available models written in any language (matlab,octave or python).
 * *decision_stage* folder stores the available detectors written in any language.
 * *Experiment* files (either AFC, AMT or your own) can be found in the experiment folder.
-* *model_server* folder stores the matlab and python function used to interface experiments, models and
+* *model_server* folder stores the matlab and python functions used to interface experiments, models and
  detectors (see call graph).
 * *data* folder stores the results produced on the experiment side.
 * *plot* routine folder contains a set of function to plot the results store in the data folder.
