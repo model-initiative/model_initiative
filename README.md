@@ -31,7 +31,7 @@ You can now open a matlab instance, navigate to the main *model_initiative* fold
 ```model_initiative_init_experiment```
 script to add the necessary paths to the matlab path. Then run ```AFC_init```.
 After that navigate to the *afc* folder and run the ```afc_addpath``` script.
-After that, you can run for instance the following:
+You can then run for instance the following:
 
 ```afc_main('KleinHennig2011','ModelInitiative','identifierXY','4');```
 
