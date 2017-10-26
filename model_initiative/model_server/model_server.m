@@ -75,7 +75,7 @@ else
         else
             save pathway_out.mat pathway_out -v6
             detector_interface_matlab(detector_name_and_args,detector_language)
-            cd(model_framework.iopath); % is this necessary?
+            cd(model_framework.iopath); 
         end
     end
 end
