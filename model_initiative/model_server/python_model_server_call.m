@@ -1,5 +1,5 @@
 function python_model_server_call(no_intervals,model_name_and_args,detector_name_and_args,model_language,detector_language)
-%This function is called by the matlab/octave model_server functin when the language chosen by the user is python
+%This function is called by the matlab/octave model_server function when the language chosen by the user is python
 %it then launches a new thread to run the model_server_python function
 
 %saving arguments to use when calling the model_server_python function
