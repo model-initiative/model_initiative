@@ -33,7 +33,7 @@ def model_server_python(no_intervals, model_name_and_args, detector_name_and_arg
             os.remove(os.path.join(path, 'feedback.csv'))
 
         n = 0
-        # this loops here keep looking for the intervals produced on the
+        # this loop here keeps looking for the intervals produced on the
         # experiment side until the experiment side stops and output a
         # finished.txt file
         while not os.path.exists(os.path.join(path, 'finished.txt')):
