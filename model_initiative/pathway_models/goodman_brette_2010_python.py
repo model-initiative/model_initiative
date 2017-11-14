@@ -4,11 +4,11 @@ from brian2.hears import *
 #in Goodman and Brette,2010
 #a good choice for the detector is the max_index.py detector
 
-def goodman_brette_2010_python(soundtest, number_neurons=20, noise=0.05):
+def goodman_brette_2010_python(soundtest, number_neurons=50, noise=0.05):
     sound = Sound((soundtest[0], soundtest[1]))
     ## Create an hrtfset of number_neurons itds ##
     hset = HeadlessDatabase(itd=np.linspace(
-	0, 0.008, number_neurons), fractional_itds=False).load_subject()
+	0, 0.002, number_neurons), fractional_itds=False).load_subject()
     num_indices = hset.num_indices
     swapped_channels = RestructureFilterbank(sound, indexmapping=[1, 0]) 
     hset_fb = hset.filterbank(Repeat(swapped_channels, num_indices))
