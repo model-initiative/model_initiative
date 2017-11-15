@@ -41,7 +41,7 @@ else
         go = 0;
         while ~go
             go = exist(['interval_'  num2str(no_intervals) '.wav'],'file');
-            pause(.02)
+            pause(.1)
             if exist('finished.txt','file')
                 disp(['total number of trials: ' num2str(n-1)])
                 delete('finished.txt')
