@@ -78,7 +78,10 @@ def klein_hennig_2011_python(soundtest, noise, tau=None):
 
     scl = scl.reshape((s.channel(0).nsamples))
     scr = scr.reshape((s.channel(0).nsamples))
-
+    
+    scl=scl/sqrt(np.mean(scl**2))
+    scr=scr/sqrt(np.mean(scr**2))
+    
     scl = scl + noise * randn(s.channel(1).nsamples)
     scr = scr + noise * randn(s.channel(1).nsamples)
 
