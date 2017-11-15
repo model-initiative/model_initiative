@@ -4,7 +4,7 @@ from brian2.hears import *
 #in Goodman and Brette,2010
 #a good choice for the detector is the max_index.py detector
 
-def goodman_brette_2010_python(soundtest, number_neurons=50, noise=0.05):
+def goodman_brette_2010_python(soundtest, number_neurons=100, noise=0.05):
     sound = Sound((soundtest[0], soundtest[1]))
     ## Create an hrtfset of number_neurons itds ##
     hset = HeadlessDatabase(itd=np.linspace(
