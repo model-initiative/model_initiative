@@ -8,6 +8,7 @@ addpath([fileparts(which(mfilename)), filesep, 'model_server'])
 addpath([fileparts(which(mfilename)), filesep, 'pathway_models'])
 addpath(genpath([fileparts(which(mfilename)), filesep, 'pathway_models']))
 addpath([fileparts(which(mfilename)), filesep, 'decision_stages'])
+addpath([fileparts(which(mfilename)), filesep, 'tools',filesep, 'custom_envelope_generation'])
 
 % do not include data or plot_routines folder here because that is not the
 % business of the model but rather of the experiment
