@@ -111,14 +111,13 @@ please edit the *detector_interface_matlab.m* and the *python_model_server_call.
 in all commands starting with ```export LD_LIBRARY_PATH=/usr/lib/i386-linux-gnu``` with your own
 path. Everything else should work well after that change.
 
-* For the MacOS users: it is assumed that Matlab and Octave were installed by the user in the *Applica-
- tions* folder (default folder used by MacOS when software is installed). The matlab and octave binary
+* For the MacOS users: it is assumed that Matlab and Octave were installed by the user in the *Applications* folder (default folder used by MacOS when software is installed). The matlab and octave binary
  files are not directly callable from the command line. To change that, a couple of symbolic links must
  be set up.
 
   - For matlab: Open a terminal window, from there type:
  ``` sudo ln -s /path to your matlab bin /usr/local/bin/matlab ```
-  The matlab binary file is usually located at */Applications/MATLAB RXXXX/bin/matlab* where
+  The matlab binary file is usually located at */Applications/MATLAB_RXXXX.app/bin/matlab* where
   XXXX is the version of matlab.
  
   - For Octave: Open a terminal window,from there type:
