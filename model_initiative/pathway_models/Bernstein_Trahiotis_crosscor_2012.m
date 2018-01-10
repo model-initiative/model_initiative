@@ -9,10 +9,10 @@ disp('Note: this model requires the binaural toolbox (Akeroyd 2001) in the path'
 mstim = mwavecreate(stim(:,1), stim(:,2), samplefreq_hz,0);
 
 %% actual model
-stimcorrel_temp=mcorrelogram_x(2000,8000,4,-2000,2000,'shear_hif','cp',mstim,0);
-stimcorrel=mccgramdelayweight_hitest(stimcorrel_temp,'shear',ptauFreq,0);
+stimcorrel_temp=mcorrelogram_BT(2000,8000,4,-2000,2000,'shear_hif','cp',mstim,0);
+stimcorrel=mccgramdelayweight_hitest_BT(stimcorrel_temp,'shear',ptauFreq,0);
 %Find the IID
 IIDmeasured=10.*log10(sum(stimcorrel.powerleft)./sum(stimcorrel.powerright));
 %Nonlinear processing magnifies IID by factor of three, so divide;
 IIDmeasured=IIDmeasured/3;
-cross_correlogram=mccgramIIDweight(stimcorrel,IIDmeasured,0);
+cross_correlogram=mccgramIIDweight_BT(stimcorrel,IIDmeasured,0);
