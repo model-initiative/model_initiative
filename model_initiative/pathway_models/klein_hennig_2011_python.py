@@ -35,7 +35,7 @@ def adaptation_loop(nbrLoops, source, tau):
     tmp2 = np.zeros((nbrLoops))
     minLev = 0.00001
     for i in xrange(nbrLoops):
-        b0[i] = 1 / (tau[i] * 44100)
+        b0[i] = 1.0 / (tau[i] * 44100)
         a1[i] = exp(-b0[i])
         b0[i] = 1 - a1[i]
         tmp2[i] = minLev**(0.5**(i + 1))
@@ -53,10 +53,10 @@ def adaptation_loop(nbrLoops, source, tau):
             tmp1 = tmp1 / tmp2[j]
             maxvalue = (1 - minl[j]**2) * limit - 1
             factor = maxvalue * 2
-            expfac = -2 / maxvalue
+            expfac = -2.0 / maxvalue
             offset = maxvalue - 1
             if tmp1 > 1:
-                tmp1 = factor / (1 + exp(expfac * (tmp1 - 1))) - offset
+                tmp1 = factor / (1.0 + exp(expfac * (tmp1 - 1))) - offset
 
             tmp2[j] = a1[j] * tmp2[j] + b0[j] * tmp1
             arrout[i, 0] = tmp1
