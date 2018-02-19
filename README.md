@@ -151,21 +151,21 @@ just use:
 
 however if the model and the detector are written in different languages use for instance:
 
-``` model_server(2,'klein_hennig_2011_python(wave,0.18,None)','argmin(pathway_out)','python','matlab')```
+``` model_server(2,'klein_hennig_2011_python(wave,fs,0.18,None)','argmin(pathway_out)','python','matlab')```
 or
 ``` model_server(2,'klein_hennig_2011(wave,fs,0.18,0)','argmin_python(pathway_out)','matlab','python') ```
 or
-``` model_server(2,'goodman_brette_2010_python(wave,20,0.05)','argmax_python(pathway_out)','python','python')```
+``` model_server(2,'goodman_brette_2010_python(wave,fs,20,0.05)','argmax_python(pathway_out)','python','python')```
 
 ### For the python2 user
 
 1. using a command terminal, navigate to the *model_server* folder
 2. From there run for instance:
-```python -c "from model_server_python import model_server_python; model_server_python(2,'klein_hennig_2011_python(wave,0.18,None)','argmin_python(pathway_out)','python','python')" ```
+```python -c "from model_server_python import model_server_python; model_server_python(2,'klein_hennig_2011_python(wave,fs,0.18,None)','argmin_python(pathway_out)','python','python')" ```
 or
 ```python -c "from model_server_python import model_server_python; model_server_python(2,'klein_hennig_2011(wave,fs,0.18,0)','argmin_python(pathway_out)','matlab','python')"```
 or
-```python -c "from model_server_python import model_server_python; model_server_python(2,'goodman_brette_2010_python(wave,20,0.05)','argmax_python(pathway_out)','python','python')"```
+```python -c "from model_server_python import model_server_python; model_server_python(2,'goodman_brette_2010_python(wave,fs,20,0.05)','argmax_python(pathway_out)','python','python')"```
 
 You can also check the available detectors and models by running the ```check_available_detectors``` and
 ```check_available_models``` function located in the *model_server* folder. Note though that all detectors will not
@@ -178,8 +178,7 @@ Amongst the arguments of the model server function, two of them are of particula
 
 * *model_name_and_args* refers to the name of the chosen model and the set of arguments chosen by the
 user to run the model with. The first argument should always be *wave*, which refers to the dual channel
-sound array. Matlab pathway models often require the samplerate as argument. Use *fs* to refer to the
-samplerate and place it at the second position in the argument list.
+sound array, the second argument should always be the samplerate  *fs*. 
 
 * *detector_name_and_args* refers to the name of the chosen detector and the set of arguments chosen
 by the user to run the detector with. The first argument of the detector function should always be
