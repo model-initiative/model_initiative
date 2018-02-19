@@ -5,7 +5,7 @@ from brian.hears import *
 
 
 ###Preprocessing filtering ###
-def pre_processing(soundtest):
+def pre_processing(soundtest,fs):
     bw = 10**(0.037 + 0.785 * log10(4000))
     gfb_l = ApproximateGammatone(soundtest.channel(
         0), cf=4 * kHz, bandwidth=bw, order=4)
@@ -23,7 +23,7 @@ def pre_processing(soundtest):
 
     sl = np.array(persig_l)
     sr = np.array(persig_r)
-    s = Sound((sl, sr))
+    s = Sound((sl, sr),samplerate=fs*Hz)
 
     return s
 
@@ -67,7 +67,7 @@ def adaptation_loop(nbrLoops,fs, source, tau):
 def klein_hennig_2011_python(soundtest,fs, noise, tau=None):
     sound = Sound((soundtest[0], soundtest[1]),samplerate=fs*Hz)
     # print sound
-    s = pre_processing(sound)
+    s = pre_processing(sound,fs)
     if tau is not None:
         scl = adaptation_loop(len(tau),fs, s.channel(0), tau)
         scr = adaptation_loop(len(tau),fs, s.channel(1), tau)
