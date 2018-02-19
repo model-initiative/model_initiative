@@ -2,7 +2,7 @@ from brian import *
 from brian.hears import *
 #This function implements a model similar to the one described
 #in Goodman and Brette,2010
-#a good choice for the detector is the max_index.py detector
+#a good choice for the detector is the argmax_python.py detector
 
 def goodman_brette_2010_python(soundtest,fs,number_neurons=20, noise=0.05):
     sound = Sound((soundtest[0], soundtest[1]),samplerate=fs*Hz)
