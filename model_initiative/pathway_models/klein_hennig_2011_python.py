@@ -1,7 +1,7 @@
 # The function "NCC" below handles the processing of the intervals by a cross
 # correlation model with or without adaptation loops###
-from brian2 import *
-from brian2.hears import *
+from brian import *
+from brian.hears import *
 
 
 ###Preprocessing filtering ###
@@ -28,14 +28,14 @@ def pre_processing(soundtest):
     return s
 
 
-def adaptation_loop(nbrLoops, source, tau):
+def adaptation_loop(nbrLoops,fs, source, tau):
 
     b0 = np.zeros((nbrLoops))
     a1 = np.zeros((nbrLoops))
     tmp2 = np.zeros((nbrLoops))
     minLev = 0.00001
     for i in xrange(nbrLoops):
-        b0[i] = 1.0 / (tau[i] * 44100)
+        b0[i] = 1.0 / (tau[i] * fs)
         a1[i] = exp(-b0[i])
         b0[i] = 1 - a1[i]
         tmp2[i] = minLev**(0.5**(i + 1))
@@ -64,13 +64,13 @@ def adaptation_loop(nbrLoops, source, tau):
     return arrout
 
 
-def klein_hennig_2011_python(soundtest, noise, tau=None):
-    sound = Sound((soundtest[0], soundtest[1]))
+def klein_hennig_2011_python(soundtest,fs, noise, tau=None):
+    sound = Sound((soundtest[0], soundtest[1]),samplerate=fs*Hz)
     # print sound
     s = pre_processing(sound)
     if tau is not None:
-        scl = adaptation_loop(len(tau), s.channel(0), tau)
-        scr = adaptation_loop(len(tau), s.channel(1), tau)
+        scl = adaptation_loop(len(tau),fs, s.channel(0), tau)
+        scr = adaptation_loop(len(tau),fs, s.channel(1), tau)
 
     else:
         scl = np.array(s.channel(0))
