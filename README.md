@@ -1,8 +1,8 @@
 # README #
 ## Version 0.1.2
- 
-For a quick start with Matlab see *quick_start.txt* and *quick_example.txt* in the *model_initiative* folder.
+Please use the latest version 0.1.2 of the model initiative available here. This version includes corrections to previous bugs present in older versions.
 
+For a quick start with Matlab see *quick_start.txt* and *quick_example.txt* in the *model_initiative* folder.
 
 ## Introduction
 
