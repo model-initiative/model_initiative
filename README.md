@@ -1,5 +1,6 @@
 # README #
-## Version 0.1.1
+## Version 0.1.2
+ 
 For a quick start with Matlab see *quick_start.txt* and *quick_example.txt* in the *model_initiative* folder.
 
 
