@@ -6,6 +6,7 @@ from brian.hears import *
 
 ###Preprocessing filtering ###
 def pre_processing(soundtest,fs):
+    set_default_samplerate(fs*Hz)
     bw = 10**(0.037 + 0.785 * log10(4000))
     gfb_l = ApproximateGammatone(soundtest.channel(
         0), cf=4 * kHz, bandwidth=bw, order=4)
@@ -65,6 +66,7 @@ def adaptation_loop(nbrLoops,fs, source, tau):
 
 
 def klein_hennig_2011_python(soundtest,fs, noise, tau=None):
+    set_default_samplerate(fs*Hz)
     sound = Sound((soundtest[0], soundtest[1]),samplerate=fs*Hz)
     # print sound
     s = pre_processing(sound,fs)
