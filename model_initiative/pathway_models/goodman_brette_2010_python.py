@@ -5,6 +5,7 @@ from brian.hears import *
 #a good choice for the detector is the argmax_python.py detector
 
 def goodman_brette_2010_python(soundtest,fs,number_neurons=20, noise=0.05):
+    set_default_samplerate(fs*Hz)	
     sound = Sound((soundtest[0], soundtest[1]),samplerate=fs*Hz)
     ## Create an hrtfset of number_neurons itds ##
     hset = HeadlessDatabase(itd=np.linspace(
